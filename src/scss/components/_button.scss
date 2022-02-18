@@ -1,6 +1,6 @@
 .button {
   @include reset-btn;
-  font-size: 25px;
+  font-size: 16px;
   line-height: 32px;
   text-align: center;
   display: flex;
@@ -9,28 +9,41 @@
   padding-left: 7px;
   padding-right: 7px;
   text-transform: uppercase;
-  color: white;
+  color: $black;
   font-weight: 700;
-  background: linear-gradient(180deg, #ffa665 0%, #fc4f19 100%);
-  box-shadow: 0px 6px 0px #cb3300;
-  border-radius: 8px;
+  background: linear-gradient(90.46deg, #eaff00 0.5%, #00cd46 99.75%);
+  box-shadow: 0px 4px 0px #1bb11c;
+  border-radius: 177px;
   width: 100%;
-  min-height: 92px;
+  max-width: 285px;
+  min-height: 57px;
   overflow: hidden;
   position: relative;
 
-  @media (max-width: 650px) {
-    font-size: 16px;
+  &_present {
+    display: none;
+
+    @media (max-width: 650px) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &:hover {
-    background: #fc4f19;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.45),
+        rgba(255, 255, 255, 0.45)
+      ),
+      linear-gradient(90.46deg, #eaff00 0.5%, #00cd46 99.75%);
   }
 
   &:active {
-    background: #cb3300;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+      linear-gradient(90.46deg, #eaff00 0.5%, #00cd46 99.75%);
     box-shadow: none;
-    top: 6px;
+    top: 4px;
   }
 
   &::after {

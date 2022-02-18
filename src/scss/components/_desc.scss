@@ -7,6 +7,7 @@
 
   @media (max-width: 650px) {
     padding-bottom: 30px;
+    min-height: auto;
   }
 }
 
@@ -39,6 +40,15 @@
     right: -893px;
     top: -169px;
     z-index: -1;
+
+    @media (max-width: 1150px) {
+      right: -837px;
+      top: -206px;
+    }
+
+    @media (max-width: 700px) {
+      content: none;
+    }
   }
 
   span {
@@ -95,6 +105,10 @@
 
   @include tablet-mb;
   @include mobile-mb;
+
+  @media (max-width: 650px) {
+    gap: 20px;
+  }
 }
 
 .desc__item {
@@ -112,7 +126,7 @@
 
   @for $i from 1 through 3 {
     &:nth-child(#{$i})::before {
-      content: url('/src/img/icons/desc/#{$i}.png')
+      content: url('/src/img/icons/desc/#{$i}.png');
     }
   }
 }
