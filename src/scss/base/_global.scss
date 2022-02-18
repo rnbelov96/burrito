@@ -69,6 +69,17 @@ main {
       content: none;
     }
   }
+
+  
+  &_pink::after {
+    background-color: $pink;
+  }
+
+  &_dish::after {
+    @media (max-width: 1150px) {
+      content: none;
+    }
+  }
 }
 
 .digit {

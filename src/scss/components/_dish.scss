@@ -1,0 +1,99 @@
+.dish {
+  padding-top: 95px;
+  padding-bottom: 72px;
+  background-color: white;
+}
+
+.dish__title {
+  @include title;
+  text-align: center;
+  margin-bottom: 16px;
+  position: relative;
+
+  &::before {
+    content: url('/src/img/dish-dots-top.png');
+    position: absolute;
+    top: -117px;
+    @include x-align;
+  }
+}
+
+.dish__text {
+  @include h4;
+  text-align: center;
+  margin-bottom: 65px;
+
+  @media (max-width: 900px) {
+    margin-bottom: 35px;
+  }
+
+  @include mobile-mb;
+}
+
+.dish__list {
+  @include reset-list;
+  display: flex;
+  gap: 33px;
+  flex-wrap: wrap;
+  margin-bottom: 72px;
+  position: relative;
+  max-width: 835px;
+
+  @include tablet-mb;
+  
+  @media (max-width: 650px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
+
+  &::after {
+    content: url('/src/img/dish-menu.jpg');
+    position: absolute;
+    right: -535px;
+    bottom: -5px;
+
+    @media (max-width: 900px) {
+      content: none;
+    }
+  }
+}
+
+.dish__item {
+  flex: 0 0 255px;
+
+  &:last-child {
+    .dish__item-title {
+      font-size: 28px;
+      height: 41.6px;
+      z-index: 1;
+      position: relative;
+    }
+  }
+}
+
+.dish__item-title {
+  @include h3;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 8px;
+
+  @media (max-width: 650px) {
+    font-size: 22px !important;
+  }
+}
+
+.dish__item-img {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.dish__item-price,
+.dish__item-amount {
+  @include body;
+  text-align: center;
+  margin-bottom: 0;
+}
