@@ -98,6 +98,12 @@ main {
       content: none;
     }
   }
+
+  &_secrets::after {
+    @media (max-width: 1020px) {
+      content: none;
+    }
+  }
 }
 
 .digit {

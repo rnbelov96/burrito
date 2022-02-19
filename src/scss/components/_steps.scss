@@ -1,0 +1,124 @@
+.steps {
+  background: #ffac1a;
+  padding-top: 55px;
+  padding-bottom: 65px;
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    padding-bottom: 46px;
+  }
+}
+
+.steps__title {
+  @include title;
+  text-align: center;
+  margin-bottom: 37px;
+
+  @include mobile-mb;
+}
+
+.steps__list {
+  @include reset-list;
+  gap: 30px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.steps__item {
+  flex: 0 0 350px;
+  position: relative;
+
+  @for $i from 1 through 8 {
+    &:nth-child(#{$i}) {
+      order: #{$i};
+    }
+  }
+
+  &:nth-child(4) {
+    order: 6;
+  }
+  &:nth-child(5) {
+    order: 5;
+  }
+  &:nth-child(6) {
+    order: 4;
+  }
+
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(7) {
+    &::after {
+      content: url('/src/img/icons/step-arrow-left.svg');
+      position: absolute;
+      left: 158px;
+      top: 0px;
+    }
+  }
+
+  &:nth-child(4),
+  &:nth-child(5) {
+    &::after {
+      content: url('/src/img/icons/step-arrow-right.svg');
+      position: absolute;
+      left: -220px;
+      top: 0px;
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      content: url('/src/img/icons/step-arrow-right-down.svg');
+      position: absolute;
+      right: -24px;
+      top: 186px;
+    }
+  }
+
+  &:nth-child(6) {
+    &::after {
+      content: url('/src/img/icons/step-arrow-left-down.svg');
+      position: absolute;
+      left: 10px;
+      top: 213px;
+    }
+  }
+
+  &::before {
+    content: url('/src/img/icons/steps-circle.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  @media (max-width: 650px) {
+    flex-basis: 300px;
+  }
+}
+
+.steps__item-number {
+  font-size: 72px;
+  line-height: 67px;
+  height: 60px;
+  margin-bottom: 0;
+  color: $pink;
+  font-weight: bold;
+}
+
+.steps__item-title {
+  @include h4;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.steps__item-text {
+  @include body;
+  margin-bottom: 0;
+  text-align: center;
+}
