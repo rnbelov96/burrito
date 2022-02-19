@@ -1,0 +1,144 @@
+.stats {
+  padding-top: 106px;
+  padding-bottom: 96px;
+
+  @media (max-width: 991px) {
+    padding-bottom: 66px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 80px;
+    padding-bottom: 46px;
+  }
+}
+
+.stats__title {
+  @include title;
+  text-align: center;
+  max-width: 905px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  position: relative;
+
+  &::before {
+    content: url('/src/img/stats-dots-top.png');
+    position: absolute;
+    top: -122px;
+    @include x-align;
+
+    @media (max-width: 650px) {
+      top: -100px;
+    }
+  }
+}
+
+.stats__text {
+  @include h4;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.stats__list-title {
+  @include h4;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.stats__list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  position: relative;
+
+  &::after {
+    content: url('/src/img/stats-img.png');
+    right: -474px;
+    top: -261px;
+    position: absolute;
+    z-index: -1;
+
+    @media (max-width: 1600px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: 20px;
+  }
+}
+
+.stats__item {
+  flex: 0 0 350px;
+
+  @media (max-width: 650px) {
+    flex-basis: 300px;
+  }
+
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) .stats__item-img {
+      background-image: url('/src/img/icons/stats/#{$i}.svg');
+    }
+  }
+}
+
+.stats__item-img {
+  width: 125px;
+  height: 134.21px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.stats__item-text {
+  @include body;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.stats__note {
+  @include h4;
+  margin-left: auto;
+  border: 4px dashed #e14287;
+  border-radius: 16px;
+  max-width: 1015px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 95px;
+  padding-right: 86px;
+  position: relative;
+  margin-bottom: 56px;
+
+  @media (max-width: 1150px) {
+    max-width: 98%;
+    padding-left: 114px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: 36px;
+    padding: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    @include y-align;
+    left: -95px;
+    content: url('/src/img/icons/stats/7.svg');
+
+    @media (max-width: 1150px) {
+      left: -56px;
+    }
+
+    @media (max-width: 650px) {
+      content: none;
+    }
+  }
+}

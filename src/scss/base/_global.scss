@@ -80,6 +80,12 @@ main {
       content: none;
     }
   }
+
+  &_stats::after {
+    @media (max-width: 710px) {
+      content: none;
+    }
+  }
 }
 
 .digit {

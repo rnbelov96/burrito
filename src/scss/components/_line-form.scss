@@ -42,17 +42,6 @@
       margin-right: auto;
     }
 
-    .line-form__bg {
-      width: calc(100% + 32px);
-      height: calc(100% + 32px);
-      position: absolute;
-      @include central-align;
-      z-index: -1;
-      background-color: rgba(219, 238, 235, 0.5);
-      border-radius: 16px;
-      mix-blend-mode: color;
-    }
-
     &::after {
       content: none;
     }
@@ -94,6 +83,17 @@
       margin-right: auto;
     }
   }
+}
+
+.line-form__bg {
+  width: calc(100% + 32px);
+  height: calc(100% + 32px);
+  position: absolute;
+  @include central-align;
+  z-index: -1;
+  background-color: rgba(219, 238, 235, 0.5);
+  border-radius: 16px;
+  mix-blend-mode: color;
 }
 
 .line-form__title {
@@ -175,6 +175,10 @@
   color: #121212;
   outline: none;
   border: none;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
 
   &::-webkit-input-placeholder {
     color: rgba(#121212, 0.5);

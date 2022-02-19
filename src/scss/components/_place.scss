@@ -1,0 +1,137 @@
+.place {
+  background: #ffac1a;
+  padding-top: 54px;
+  padding-bottom: 64px;
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.place__text-box {
+  max-width: 825px;
+  margin-left: auto;
+  position: relative;
+
+  @media (max-width: 1000px) {
+    margin-right: auto;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    left: -570px;
+    top: -13px;
+    content: url('/src/img/place-img.png');
+
+    @media (max-width: 1000px) {
+      content: none;
+    }
+  }
+}
+
+.place__title {
+  @include title;
+  margin-bottom: 16px;
+}
+
+.place__text {
+  @include body;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 84px;
+
+    @media (max-width: 1000px) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 650px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  b {
+    font-weight: bold;
+  }
+}
+
+.place__list {
+  @include reset-list;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/place-dots-left.png');
+    left: -390px;
+    top: 4px;
+    z-index: -2;
+
+    @media (max-width: 1280px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: url('/src/img/place-dots-right.png');
+    right: -389px;
+    top: -394px;
+    z-index: -2;
+
+    @media (max-width: 1280px) {
+      content: none;
+    }
+  }
+}
+
+.place__item {
+  flex: 0 0 350px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  @media (max-width: 650px) {
+    flex-basis: 300px;
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      content: url('/src/img/icons/place/#{$i}.png');
+    }
+  }
+}
+
+.place__item-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+}
+
+.place__item-title {
+  @include h4;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.place__item-text {
+  @include body;
+  margin-bottom: 0;
+  text-align: center;
+}
