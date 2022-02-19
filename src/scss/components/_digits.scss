@@ -1,0 +1,156 @@
+.digits {
+  padding-bottom: 80px;
+
+  @media (max-width: 991px) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 650px) {
+    padding-bottom: 30px;
+  }
+}
+
+.digits__title {
+  @include title;
+  max-width: 825px;
+  margin-bottom: 16px;
+}
+
+.digits__subtitle {
+  @include body;
+  max-width: 825px;
+  margin-bottom: 16px;
+}
+
+.digits__list {
+  @include reset-list;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 1150px) {
+    justify-content: center;
+  }
+
+  &::after {
+    content: url('/src/img/digits-money.png');
+    position: absolute;
+    right: -400px;
+    top: -240px;
+    z-index: -1;
+
+    @media (max-width: 1350px) {
+      content: none;
+    }
+  }
+}
+
+.digits__item {
+  flex: 0 0 255px;
+  position: relative;
+
+  &::after {
+    content: url('/src/img/digits-item-bg.png');
+    position: absolute;
+    z-index: -1;
+    top: -7px;
+    left: -7px;
+  }
+
+  &:last-child {
+    margin-left: 90px;
+
+    @media (max-width: 1150px) {
+      margin-left: 0;
+    }
+
+    .digits__numbers span {
+      font-weight: 600;
+    }
+
+    &::after {
+      content: url('/src/img/digits-item-bg-orange.png');
+      top: -37px;
+      left: -70px;
+
+      @media (max-width: 1150px) {
+        top: -19px;
+      }
+    }
+  }
+
+  &:nth-child(1),
+  &:nth-child(5) {
+    .digits__numbers span {
+      font-size: 72px;
+      margin-left: 0;
+    }
+
+    .digits__text-wrapper {
+      position: relative;
+      top: 21px;
+    }
+  }
+}
+
+.digits__text-wrapper {
+  height: 116px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.digits__text {
+  @include body;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.digits__numbers {
+  @include body;
+  text-align: center;
+  margin-bottom: 0;
+
+  span {
+    font-size: 42px;
+    margin-left: 15px;
+  }
+}
+
+.digits__note {
+  @include h4;
+  margin-bottom: 0;
+  position: relative;
+  border: 4px dashed #e14287;
+  border-radius: 16px;
+  padding-left: 115px;
+  padding-right: 89px;
+  padding-top: 37px;
+  padding-bottom: 37px;
+  text-align: center;
+  z-index: 1;
+
+  @media (max-width: 1150px) {
+    padding: 35px;
+  }
+
+  @media (max-width: 650px) {
+    padding: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/digits-img.png');
+    left: -483px;
+    top: -379px;
+
+    @media (max-width: 1560px) {
+      content: none;
+    }
+  }
+}

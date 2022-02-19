@@ -35,6 +35,18 @@
     padding-right: 20px;
   }
 
+  &_calc {
+    .line-form__title {
+      max-width: 848px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+
   &_dish {
     .line-form__title {
       max-width: 848px;
@@ -109,7 +121,7 @@
   }
 
   @media (max-width: 650px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
