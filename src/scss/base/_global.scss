@@ -72,7 +72,7 @@ main {
 
   
   &_pink::after {
-    background-color: $pink;
+    background-color: rgba($pink, 0.6);
   }
 
   &_dish::after {
@@ -101,6 +101,12 @@ main {
 
   &_secrets::after {
     @media (max-width: 1020px) {
+      content: none;
+    }
+  }
+
+  &_exp::after {
+    @media (max-width: 830px) {
       content: none;
     }
   }

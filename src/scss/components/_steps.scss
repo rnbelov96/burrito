@@ -2,6 +2,8 @@
   background: #ffac1a;
   padding-top: 55px;
   padding-bottom: 65px;
+  position: relative;
+  z-index: 2;
 
   @media (max-width: 991px) {
     padding-top: 50px;
@@ -27,6 +29,38 @@
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
+  margin-bottom: 64px;
+  position: relative;
+
+  &::before {
+    content: url('/src/img/steps-dots-left.png');
+    position: absolute;
+    left: -390px;
+    top: -180px;
+
+    @media (max-width: 1580px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: url('/src/img/steps-dots-right.png');
+    position: absolute;
+    right: -390px;
+    top: 238px;
+
+    @media (max-width: 1580px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    margin-bottom: 56px;
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: 36px;
+  }
 }
 
 .steps__item {
@@ -88,6 +122,14 @@
     }
   }
 
+  @media (max-width: 1150px) {
+    order: initial !important;
+
+    &::after {
+      content: none !important;
+    }
+  }
+
   &::before {
     content: url('/src/img/icons/steps-circle.svg');
     position: absolute;
@@ -108,6 +150,11 @@
   margin-bottom: 0;
   color: $pink;
   font-weight: bold;
+
+  @media (max-width: 650px) {
+    font-size: 40px !important;
+    height: 49px;
+  }
 }
 
 .steps__item-title {

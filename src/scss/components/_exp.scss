@@ -1,0 +1,136 @@
+.exp {
+  padding-top: 104px;
+  padding-bottom: 64px;
+
+  @media (max-width: 991px) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 650px) {
+    padding-bottom: 30px;
+  }
+}
+
+.exp__title {
+  @include title;
+  max-width: 920px;
+  margin-bottom: 16px;
+  position: relative;
+
+  &::before {
+    content: url('/src/img/stats-dots-top.png');
+    position: absolute;
+    top: -122px;
+    left: 62%;
+    transform: translateX(-50%);
+  }
+}
+
+.exp__text {
+  @include body;
+  max-width: 920px;
+  margin-bottom: 32px;
+
+  @include mobile-mb;
+}
+
+.exp__list {
+  @include reset-list;
+  max-width: 540px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+
+  &::after {
+    content: url('/src/img/exp-img.jpg');
+    position: absolute;
+    z-index: -2;
+    right: -972px;
+    top: -127px;
+
+    @media (max-width: 900px) {
+      right: -908px;
+    }
+
+    @media (max-width: 650px) {
+      display: block;
+      position: relative;
+      left: 0px;
+      top: -135px;
+      zoom: 0.5;
+    }
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: -50px;
+  }
+}
+
+.exp__item {
+  flex: 0 0 255px;
+
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      .exp__item-img {
+        background-image: url('/src/img/icons/exp/#{$i}.svg');
+      }
+    }
+  }
+}
+
+.exp__item-img {
+  width: 125px;
+  height: 134.21px;
+  display: block;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.exp__item-text {
+  @include body;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.exp__note {
+  @include h4;
+  margin-left: auto;
+  border: 4px dashed #e14287;
+  border-radius: 16px;
+  max-width: 1015px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  padding-left: 95px;
+  padding-right: 30px;
+  position: relative;
+  margin-bottom: 0;
+
+  @media (max-width: 1150px) {
+    max-width: 98%;
+    padding-left: 114px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: 650px) {
+    padding: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    @include y-align;
+    left: -95px;
+    content: url('/src/img/icons/exp/5.png');
+
+    @media (max-width: 1150px) {
+      left: -56px;
+    }
+
+    @media (max-width: 650px) {
+      content: none;
+    }
+  }
+}

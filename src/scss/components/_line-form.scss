@@ -59,6 +59,12 @@
     }
   }
 
+  &_steps {
+    &::after {
+      content: none;
+    }
+  }
+
   &_desc {
     &::before {
       width: 160px;
