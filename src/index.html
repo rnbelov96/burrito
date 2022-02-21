@@ -1132,8 +1132,16 @@
               class="footer__logo"
             />
             <div class="footer__social-list">
-              <a href="https://vk.com/burritofamily" target="_blank" class="footer__social-link"></a
-              ><a href="https://www.instagram.com/burritofamilyfood/?hl=ru" target="_blank" class="footer__social-link"></a>
+              <a
+                href="https://vk.com/burritofamily"
+                target="_blank"
+                class="footer__social-link"
+              ></a
+              ><a
+                href="https://www.instagram.com/burritofamilyfood/?hl=ru"
+                target="_blank"
+                class="footer__social-link"
+              ></a>
             </div>
             <button class="footer__policy js-policy">
               Политика конфиденциальности
@@ -1161,13 +1169,54 @@
 
     <div class="modal">
       <div class="modal__center-wrapper">
-        <form class="modal-form">
+        <form class="modal-form modal-form_modal">
           <h3 class="modal-form__title">
-            Оставьте заявку <span class="js-modal-form-title"></span>
+            <span class="js-modal-form-title"></span>
           </h3>
-          <button class="button button_modal-form js-modal-form-btn">
-            Получить документацию
-          </button>
+          <div class="modal-form__content">
+            <div class="modal-form__input-container">
+              <div class="modal-form__input-box">
+                <input
+                  type="text"
+                  placeholder="Игорь Погодин"
+                  name="name"
+                  data-type="name"
+                  class="modal-form__input"
+                />
+              </div>
+              <div class="modal-form__input-box">
+                <input
+                  type="tel"
+                  placeholder="+7 (___) ___ ____"
+                  name="phone"
+                  data-type="phone"
+                  class="modal-form__input"
+                />
+              </div>
+              <div class="modal-form__input-box">
+                <input
+                  type="email"
+                  placeholder="bestpartner@mail.ru"
+                  name="email"
+                  data-type="email"
+                  class="modal-form__input"
+                />
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="button button_modal-form js-modal-form-btn"
+            >
+              Открыть своё кафе
+            </button>
+          </div>
+          <p class="modal-form__text">
+            Я подтверждаю, что ознакомлен, и даю согласие на обработку
+            персональных данных на условиях и для целей, определяемых
+            <button type="button" class="js-policy">
+              Политикой конфиденциальности.
+            </button>
+          </p>
           <button
             data-modal-close=""
             class="modal__close"
@@ -1198,8 +1247,8 @@
           <li class="priv-policy__item">
             2. Настоящая политика Оператора в отношении обработки персональных
             данных (далее – Политика) применяется ко всей информации, которую
-            Оператор может получить о посетителях веб-сайта компании «Название
-            Компании».
+            Оператор может получить о посетителях веб-сайта компании Buritto
+            Family (ООО «ФРАНШИЗА ФЭМИЛИ», ИНН 5260477919).
           </li>
         </ol>
 
@@ -1325,8 +1374,9 @@
             новых продуктах и услугах, специальных предложениях и различных
             событиях. Пользователь всегда может отказаться от получения
             информационных сообщений, направив Оператору письмо на адрес
-            электронной почты с доменом email@mail.ru с пометкой «Отказ от
-            уведомлений о новых продуктах и услугах и специальных предложениях».
+            электронной почты с доменом buritofamily@gmail.com с пометкой «Отказ
+            от уведомлений о новых продуктах и услугах и специальных
+            предложениях».
           </li>
           <li class="priv-policy__item">
             3. Обезличенные данные Пользователей, собираемые с помощью сервисов
