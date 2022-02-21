@@ -216,7 +216,8 @@
         background-image: url('/src/img/icons/thanks-vk.svg');
       }
       &:nth-child(2) {
-        background-image: url('/src/img/icons/thanks-inst.svg');
+        @include bg;
+        background-image: url('/src/img/icons/thanks-inst.png');
       }
     }
   }
@@ -273,7 +274,7 @@
   aspect-ratio: 482/524;
   position: absolute;
   right: -58px;
-  top: 193px;
+  top: 135px;
 
   @media (max-width: 1150px) {
     position: relative;

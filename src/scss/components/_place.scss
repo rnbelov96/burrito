@@ -103,6 +103,11 @@
     position: absolute;
     top: 0;
     right: 0;
+
+    @media (max-width: 650px) {
+      zoom: 0.5;
+      right: 85px;
+    }
   }
 
   @media (max-width: 650px) {
@@ -121,6 +126,10 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 16px;
+
+  @media (max-width: 650px) {
+    width: 50%;
+  }
 }
 
 .place__item-title {

@@ -119,6 +119,14 @@
   text-shadow: 0px 4px 4px #000000;
 
   &::before {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #e14287;
+    box-shadow: -3px 3px 0px #810038, inset 8px -7px 9px rgba(0, 0, 0, 0.3);
+    content: '';
     position: absolute;
     left: 0px;
     @include y-align;
@@ -126,7 +134,7 @@
 
   @for $i from 1 through 3 {
     &:nth-child(#{$i})::before {
-      content: url('/src/img/icons/desc/#{$i}.png');
+      background-image: url('/src/img/icons/desc/#{$i}.svg');
     }
   }
 }

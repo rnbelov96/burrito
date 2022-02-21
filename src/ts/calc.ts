@@ -21,10 +21,10 @@ let adultsCurrentStep = 2;
 let kidsCurrentStep = 2;
 
 const calcResult = () => {
-  result = (Number(inRange.value) * 4500
-      + Number(outRange.value) * 10500
-      + Number(deliveryRange.value) * 4500)
-    * 0.1;
+  result = (Number(inRange.value) * 420
+      + Number(outRange.value) * 420
+      + Number(deliveryRange.value) * 420)
+    * 0.2;
   resultLabelListEl.forEach(resultLabelEl => {
     resultLabelEl.textContent = result.toLocaleString();
   });
