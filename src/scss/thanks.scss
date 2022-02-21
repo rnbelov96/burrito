@@ -5,6 +5,8 @@
 @import './base/global.scss';
 @import './components/modal.scss';
 @import './components/priv-policy.scss';
+@import './components/header.scss';
+@import './components/footer.scss';
 
 .thanks__html,
 .thanks__body {
@@ -12,9 +14,10 @@
 }
 
 .thanks__body {
-  // background-image: url('/src/img/bgs/some-image.jpg');
+  background-image: url('/src/img/bgs/thanks-bg.jpg');
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 }
 
 .thanks__wrapper {
@@ -44,4 +47,251 @@
 
 .thanks {
   flex: 1 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+
+.thanks__title {
+  @include h1;
+  max-width: 1000px;
+  margin-bottom: 16px;
+  color: white;
+
+  span {
+    color: $pink;
+  }
+}
+
+.thanks__subtitle {
+  @include h3;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 24px;
+
+  @media (max-width: 650px) {
+    font-size: 14px !important;
+  }
+
+  @include mobile-mb;
+
+  span {
+    position: relative;
+
+    &::after {
+      content: '';
+      z-index: -1;
+      width: 101%;
+      height: 100%;
+      background: #f39b00;
+      border-radius: 4px;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
+}
+
+.thanks__time-box {
+  max-width: 635px;
+  border-radius: 16px;
+  background-color: white;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.thanks__time-head {
+  @include h4;
+  font-weight: bold;
+  background: $pink;
+  margin-bottom: 0;
+  padding-left: 66px;
+  padding-right: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  color: white;
+
+  @media (max-width: 650px) {
+    padding-left: 56px;
+    padding-right: 20px;
+  }
+
+  &::before {
+    content: url('/src/img/icons/calendar.svg');
+    left: 24px;
+    top: 8px;
+    position: absolute;
+
+    @media (max-width: 650px) {
+      left: 11px;
+      top: 13px;
+    }
+  }
+
+  &::after {
+    content: url('/src/img/icons/time-dots.svg');
+    position: absolute;
+    right: 24px;
+    top: 12px;
+
+    content: none;
+  }
+
+  span {
+    @include body;
+  }
+}
+
+.thanks__time-content {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  border-radius: 0px 0px 16px 16px;
+  background-color: white;
+  border: 3px solid #e14287;
+}
+
+.thanks__time-text {
+  @include body;
+  flex: 1 1 50%;
+  text-align: center;
+  margin-bottom: 0;
+
+  @media (max-width: 650px) {
+    font-size: 14px !important;
+  }
+
+  &:first-child {
+    position: relative;
+
+    &::before {
+      content: url('/src/img/icons/time-line.png');
+      right: 0px;
+      @include y-align;
+      position: absolute;
+    }
+  }
+}
+
+.thanks__text {
+  @include body;
+  max-width: 635px;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.thanks__list-title {
+  @include h4;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.thanks__social-list {
+  display: flex;
+  align-items: center;
+  gap: 96px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+
+  @media (max-width: 790px) {
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.thanks__social-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  &:nth-child(1) {
+    .thanks__social-link {
+      width: 40px;
+      height: 40px;
+
+      &:nth-child(1) {
+        background-image: url('/src/img/icons/thanks-vk.svg');
+      }
+      &:nth-child(2) {
+        background-image: url('/src/img/icons/thanks-inst.svg');
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .thanks__social-link {
+      width: 48px;
+      height: 48px;
+      @include bg;
+
+      &:nth-child(1) {
+        background-image: url('/src/img/icons/thanks-logo.png');
+      }
+    }
+  }
+}
+
+.thanks__social-text {
+  @include body;
+  color: white;
+  margin-bottom: 0;
+}
+
+.thanks__social-link-list {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.thanks__back-link {
+  @include body;
+  @include reset-link($orange);
+  color: $orange;
+  display: block;
+  text-decoration: underline;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.thanks__slogan {
+  @include h3;
+  margin-bottom: 0;
+  color: white;
+  max-width: 525px;
+}
+
+
+.thanks__content {
+  position: relative;
+}
+
+.thanks__owner-box {
+  max-width: 482px;
+  aspect-ratio: 482/524;
+  position: absolute;
+  right: -58px;
+  top: 193px;
+
+  @media (max-width: 1150px) {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+}
+
+.thanks__owner-img {
+  width: 100%;
+}
+
+.thanks__owner-blur {
+  background: $orange;
+  width: 40%;
+  height: 40%;
+  filter: blur(93px);
+  position: absolute;
+  @include central-align;
+  z-index: -1;
 }

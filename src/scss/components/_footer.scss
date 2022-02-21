@@ -1,0 +1,126 @@
+.footer {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    #000000;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: white;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer__left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__copyright,
+.footer__data {
+  @include body;
+  margin-bottom: 8px;
+
+  @media (max-width: 991px) {
+    text-align: center;
+  }
+}
+
+.footer__address {
+  @include body;
+  padding-left: 44px;
+  position: relative;
+  margin-bottom: 0;
+
+  @media (max-width: 650px) {
+    font-size: 14px !important;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 34px;
+    height: 36px;
+    content: '';
+    @include bg;
+    background-image: url('/src/img/icons/gerb.png');
+  }
+}
+
+.footer__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+}
+
+.footer__social-list {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__social-link {
+  width: 32px;
+  height: 32px;
+
+  &:nth-child(1) {
+    background-image: url('/src/img/icons/vk.svg');
+  }
+  &:nth-child(2) {
+    background-image: url('/src/img/icons/inst.svg');
+  }
+}
+
+.footer__policy {
+  @include reset-btn;
+  font-size: 16px;
+  color: white;
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.footer__slogan-caption {
+  @include body;
+  margin-bottom: 0;
+  margin-top: 40px;
+
+  @media (max-width: 991px) {
+  margin-top: 0;
+  }
+}
+
+.footer__right-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 991px) {
+    align-items: center;
+  }
+}
+
+.footer__franch5 {
+  @include body;
+  @include reset-link(white);
+  color: white;
+  position: relative;
+  padding-left: 56px;
+
+  &::before {
+    position: absolute;
+    left: 0px;
+    top: -3px;
+    content: url('/src/img/icons/f5.svg');
+  }
+}
