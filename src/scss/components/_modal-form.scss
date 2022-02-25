@@ -16,6 +16,33 @@
       margin-right: auto;
     }
 
+    &::before {
+      width: 160px;
+      height: 286px;
+      content: '';
+      position: absolute;
+      left: -800px;
+      bottom: 0px;
+      background-image: url('/src/img/icons/dancer/1.svg');
+      display: block;
+      -webkit-animation-name: dancing-man;
+      animation-name: dancing-man;
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+
+      @media (max-width: 1040px) {
+        left: -530px;
+      }
+
+      @media (max-width: 850px) {
+        left: -18px;
+        top: initial;
+        bottom: -429px;
+      }
+    }
+
     &::after {
       position: absolute;
       width: 1070px;

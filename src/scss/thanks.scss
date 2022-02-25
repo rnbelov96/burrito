@@ -262,8 +262,29 @@
   margin-bottom: 0;
   color: white;
   max-width: 525px;
-}
+  position: relative;
 
+  &::before {
+    width: 160px;
+    height: 286px;
+    content: '';
+    position: absolute;
+    left: -164px;
+    bottom: 0px;
+    background-image: url('/src/img/icons/dancer/1.svg');
+    display: block;
+    -webkit-animation-name: dancing-man;
+    animation-name: dancing-man;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    @media (max-width: 1360px) {
+      content: none;
+    }
+  }
+}
 
 .thanks__content {
   position: relative;
@@ -295,4 +316,30 @@
   position: absolute;
   @include central-align;
   z-index: -1;
+}
+
+@keyframes dancing-man {
+  0% {
+    background-image: url('/src/img/icons/dancer/1.svg');
+  }
+
+  20% {
+    background-image: url('/src/img/icons/dancer/2.svg');
+  }
+
+  40% {
+    background-image: url('/src/img/icons/dancer/3.svg');
+  }
+
+  60% {
+    background-image: url('/src/img/icons/dancer/4.svg');
+  }
+
+  80% {
+    background-image: url('/src/img/icons/dancer/5.svg');
+  }
+
+  100% {
+    background-image: url('/src/img/icons/dancer/1.svg');
+  }
 }

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Франшиза «Burrito Family»</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.5.2/validator.min.js"
       integrity="sha512-vZEoK8xRncku4g5GANHh5zobUjeCMbZkSEahrADeAcRlk/1Ignf8sAKojkV4RZLkPw145+ILJFisI2pnjsPtGQ=="
@@ -15,6 +19,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.map&lang=ru-RU"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
   <body>
     <main>
@@ -77,6 +82,17 @@
           <button class="button button_present js-present">
             Получить презентацию
           </button>
+
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/gallery/desc/1.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/gallery/desc/2.png" />
+              </div>
+            </div>
+          </div>
           <form class="line-form line-form_desc">
             <h3 class="line-form__title">
               Оставьте заявку и получите подробную презентацию и финансовый план
